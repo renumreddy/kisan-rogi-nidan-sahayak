@@ -98,12 +98,15 @@ const matchDiseaseByCharacteristics = (characteristics: string[]): PredictionRes
     const matchRatio = matches / disease.characteristics.length;
     
     // Weight by the number of matches to prefer diseases with more matches
-    const score = matchRatio * (matches > 0 ? matches : 0.1);
+    let score = matchRatio * (matches > 0 ? matches : 0.1);
+    
+    // Ensure score is within valid range (0-1)
+    score = Math.min(1.0, Math.max(0, score));
     
     return {
       disease: disease.name,
-      // Generate confidence within the disease's confidence range
-      confidence: disease.confidence.min + (disease.confidence.max - disease.confidence.min) * score
+      // Generate confidence within the disease's confidence range and ensure it doesn't exceed 1.0
+      confidence: Math.min(1.0, disease.confidence.min + (disease.confidence.max - disease.confidence.min) * score)
     };
   });
   
@@ -123,6 +126,9 @@ export const predictLeafDisease = async (imageData: string): Promise<PredictionR
   
   // Match to a disease based on characteristics
   const prediction = matchDiseaseByCharacteristics(detectedCharacteristics);
+  
+  // Ensure confidence is always between 0 and 1 (0-100%)
+  prediction.confidence = Math.min(1.0, Math.max(0, prediction.confidence));
   
   return prediction;
 };

@@ -22,7 +22,8 @@ const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ prediction, imageData, 
   const treatment = getTranslatedTreatment(prediction.disease, language);
   const pesticides = getTranslatedPesticides(prediction.disease, language);
   
-  const confidencePercentage = Math.round(prediction.confidence * 100);
+  // Ensure confidence is always between 0-100%
+  const confidencePercentage = Math.min(100, Math.round(prediction.confidence * 100));
   
   // Determine style based on confidence
   const getConfidenceColorClass = () => {

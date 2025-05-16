@@ -21,16 +21,16 @@ const LanguageSwitcher: React.FC = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="sm">
+        <Button variant="outline" size="sm" className="border-white/20 bg-white/10 hover:bg-white/20 text-white">
           {t('languageSelector')}
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent align="end" className="bg-white border-leaf-light/20">
         {languages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
             onClick={() => setLanguage(lang.code as Language)}
-            className={language === lang.code ? 'bg-secondary' : ''}
+            className={language === lang.code ? 'bg-leaf-light/20 text-leaf-primary' : 'text-gray-700 hover:bg-leaf-light/10 hover:text-leaf-primary'}
           >
             {lang.name}
           </DropdownMenuItem>

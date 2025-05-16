@@ -8,6 +8,8 @@ import ResultsDisplay from '@/components/ResultsDisplay';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { useLanguage } from '@/context/LanguageContext';
 import { predictLeafDisease, initializeModel } from '@/services/predictionService';
+import { Link } from 'react-router-dom';
+import { HelpCircle, MessageCircle, Info } from 'lucide-react';
 
 interface PredictionResult {
   disease: string;
@@ -65,21 +67,37 @@ const Index: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen leaf-pattern-bg">
-      <header className="bg-leaf-primary text-white p-4 shadow-md">
+    <div className="min-h-screen natural-leaf-bg">
+      <header className="bg-gradient-to-r from-leaf-light to-leaf-primary text-white p-4 shadow-md">
         <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold">{t('appTitle')}</h1>
-          <LanguageSwitcher />
+          <h1 className="text-2xl font-playfair font-bold">{t('appTitle')}</h1>
+          <div className="flex items-center gap-4">
+            <LanguageSwitcher />
+            <div className="hidden md:flex items-center gap-3">
+              <Link to="/suggestions" className="text-white hover:text-leaf-highlight transition-colors flex items-center gap-1">
+                <HelpCircle size={18} />
+                <span>{t('suggestions')}</span>
+              </Link>
+              <Link to="/contact" className="text-white hover:text-leaf-highlight transition-colors flex items-center gap-1">
+                <MessageCircle size={18} />
+                <span>{t('contact')}</span>
+              </Link>
+              <Link to="/about" className="text-white hover:text-leaf-highlight transition-colors flex items-center gap-1">
+                <Info size={18} />
+                <span>{t('about')}</span>
+              </Link>
+            </div>
+          </div>
         </div>
       </header>
 
-      <main className="container mx-auto px-4 py-8 max-w-5xl">
+      <main className="container mx-auto px-4 py-12 max-w-5xl">
         {!selectedImage ? (
-          <Card className="bg-white/95 shadow-xl">
-            <CardContent className="pt-6 pb-8 px-6">
-              <div className="text-center mb-8">
-                <h1 className="text-3xl font-bold text-leaf-primary mb-3">{t('tagline')}</h1>
-                <p className="text-gray-600 max-w-2xl mx-auto">{t('uploadInstructions')}</p>
+          <Card className="bg-white/95 shadow-xl border-leaf-light/20">
+            <CardContent className="pt-8 pb-10 px-6">
+              <div className="text-center mb-10">
+                <h1 className="text-3xl font-playfair font-bold text-leaf-primary mb-4">{t('tagline')}</h1>
+                <p className="text-gray-600 max-w-2xl mx-auto font-lato">{t('uploadInstructions')}</p>
               </div>
 
               <div className="max-w-md mx-auto">
@@ -101,12 +119,12 @@ const Index: React.FC = () => {
                     className="w-full h-full object-cover opacity-50"
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="animate-pulse-light w-16 h-16 rounded-full bg-leaf-primary opacity-75"></div>
+                    <div className="animate-pulse-light w-16 h-16 rounded-full bg-leaf-light opacity-75"></div>
                   </div>
                 </div>
                 
                 <div className="text-center space-y-2">
-                  <h3 className="text-xl font-semibold text-leaf-primary">{t('analyzing')}</h3>
+                  <h3 className="text-xl font-playfair font-semibold text-leaf-primary">{t('analyzing')}</h3>
                   <div className="space-y-2 max-w-sm mx-auto">
                     <Skeleton className="h-4 w-full" />
                     <Skeleton className="h-4 w-3/4 mx-auto" />
@@ -126,9 +144,16 @@ const Index: React.FC = () => {
         )}
       </main>
 
-      <footer className="bg-leaf-dark text-white p-4 mt-auto">
-        <div className="container mx-auto text-center text-sm">
-          <p>© {new Date().getFullYear()} LeafDoctor - {t('tagline')}</p>
+      <footer className="bg-gradient-to-r from-leaf-primary to-leaf-dark text-white p-5 mt-auto">
+        <div className="container mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-sm font-lato">© {new Date().getFullYear()} LeafDoctor - {t('tagline')}</p>
+            <div className="flex gap-5 mt-3 md:mt-0">
+              <Link to="/suggestions" className="text-white hover:text-leaf-highlight text-sm transition-colors">{t('suggestions')}</Link>
+              <Link to="/contact" className="text-white hover:text-leaf-highlight text-sm transition-colors">{t('contact')}</Link>
+              <Link to="/about" className="text-white hover:text-leaf-highlight text-sm transition-colors">{t('about')}</Link>
+            </div>
+          </div>
         </div>
       </footer>
     </div>

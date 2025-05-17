@@ -311,6 +311,41 @@ const translations: TranslationDict = {
     hi: 'सुझाव',
     kn: 'ಸಲಹೆಗಳು',
   },
+  plants: {
+    en: 'Plants',
+    hi: 'पौधे',
+    kn: 'ಸಸ್ಯಗಳು',
+  },
+  plantsTitle: {
+    en: 'Plant Care Guide',
+    hi: 'पौधों की देखभाल गाइड',
+    kn: 'ಸಸ್ಯ ಆರೈಕೆ ಮಾರ್ಗದರ್ಶಿ',
+  },
+  gridView: {
+    en: 'Grid View',
+    hi: 'ग्रिड व्यू',
+    kn: 'ಗ್ರಿಡ್ ನೋಟ',
+  },
+  listView: {
+    en: 'List View',
+    hi: 'लिस्ट व्यू',
+    kn: 'ಪಟ್ಟಿ ನೋಟ',
+  },
+  basicCare: {
+    en: 'Basic Care',
+    hi: 'बुनियादी देखभाल',
+    kn: 'ಮೂಲ ಆರೈಕೆ',
+  },
+  advanced: {
+    en: 'Advanced',
+    hi: 'उन्नत',
+    kn: 'ಸುಧಾರಿತ',
+  },
+  issues: {
+    en: 'Issues',
+    hi: 'समस्याएं',
+    kn: 'ಸಮಸ್ಯೆಗಳು',
+  }
 };
 
 // Translations for specific diseases

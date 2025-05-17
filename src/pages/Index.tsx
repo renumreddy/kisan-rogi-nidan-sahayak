@@ -1,148 +1,229 @@
-import React, { useState, useEffect } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Skeleton } from '@/components/ui/skeleton';
-import { useToast } from '@/components/ui/use-toast';
-import ImageUploader from '@/components/ImageUploader';
-import ResultsDisplay from '@/components/ResultsDisplay';
-import LanguageSwitcher from '@/components/LanguageSwitcher';
-import { useLanguage } from '@/context/LanguageContext';
-import { predictLeafDisease, initializeModel } from '@/services/predictionService';
+import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { HelpCircle, MessageCircle, Info } from 'lucide-react';
+import { Leaf, Menu } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
+import { useToast } from "@/components/ui/use-toast"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import {
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuItem,
+} from "@/components/ui/navigation-menu"
+import LanguageSwitcher from '@/components/LanguageSwitcher';
+import { useMobile } from '@/hooks/useMobile';
+import axios from 'axios';
 
 interface PredictionResult {
-  disease: string;
+  class: string;
   confidence: number;
 }
 
 const Index: React.FC = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const { t, language } = useLanguage();
   const [prediction, setPrediction] = useState<PredictionResult | null>(null);
-  const [isProcessing, setIsProcessing] = useState(false);
-  const [isModelLoading, setIsModelLoading] = useState(true);
-  const { toast } = useToast();
-  const { t } = useLanguage();
+  const [loading, setLoading] = useState(false);
+  const [showResults, setShowResults] = useState(false);
+  const toast = useToast();
+  const isMobile = useMobile();
+  
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  useEffect(() => {
-    const loadModel = async () => {
-      try {
-        await initializeModel();
-        setIsModelLoading(false);
-      } catch (error) {
-        console.error('Failed to load model:', error);
-        toast({
-          variant: 'destructive',
-          title: 'Error loading model',
-          description: 'Please refresh the page to try again.'
-        });
-      }
-    };
-
-    loadModel();
-  }, [toast]);
-
-  const handleImageSelected = async (imageData: string) => {
-    setSelectedImage(imageData);
-    setIsProcessing(true);
-    setPrediction(null);
-
-    try {
-      const result = await predictLeafDisease(imageData);
-      setPrediction(result);
-    } catch (error) {
-      console.error('Error processing image:', error);
+  const handleImageUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) {
       toast({
-        variant: 'destructive',
-        title: t('errorMessage'),
+        title: t('noImageSelected') || 'No image selected',
+        description: t('pleaseSelectAnImage') || 'Please select an image to upload.',
+      });
+      return;
+    }
+
+    if (file.size > 5 * 1024 * 1024) {
+      toast({
+        title: t('imageTooLarge') || 'Image Too Large',
+        description: t('imageMustBeLessThan5MB') || 'Image must be less than 5MB.',
+      });
+      return;
+    }
+
+    const imageUrl = URL.createObjectURL(file);
+    setSelectedImage(imageUrl);
+    setPrediction(null);
+    setShowResults(false);
+
+    const formData = new FormData();
+    formData.append("image", file);
+
+    setLoading(true);
+    try {
+      const response = await axios.post(
+        "https://leafdoctor.azurewebsites.net/predict",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+
+      setPrediction(response.data);
+      setShowResults(true);
+    } catch (error) {
+      console.error("Error uploading image:", error);
+      toast({
+        title: t('uploadFailed') || 'Upload Failed',
+        description: t('tryAgainLater') || 'There was an issue uploading the image. Please try again later.',
       });
     } finally {
-      setIsProcessing(false);
+      setLoading(false);
     }
   };
 
-  const handleReset = () => {
-    setSelectedImage(null);
-    setPrediction(null);
+  const handleButtonClick = () => {
+    if (fileInputRef.current) {
+      fileInputRef.current.click();
+    }
   };
-
+  
   return (
-    <div className="min-h-screen natural-leaf-bg">
+    <div className="min-h-screen natural-leaf-bg flex flex-col">
       <header className="bg-gradient-to-r from-leaf-light to-leaf-primary text-white p-4 shadow-md">
-        <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-playfair font-bold">{t('appTitle')}</h1>
-          <div className="flex items-center gap-4">
-            <LanguageSwitcher />
-            <div className="hidden md:flex items-center gap-3">
-              <Link to="/suggestions" className="text-white hover:text-leaf-highlight transition-colors flex items-center gap-1">
-                <HelpCircle size={18} />
-                <span>{t('suggestions')}</span>
-              </Link>
-              <Link to="/contact" className="text-white hover:text-leaf-highlight transition-colors flex items-center gap-1">
-                <MessageCircle size={18} />
-                <span>{t('contact')}</span>
-              </Link>
-              <Link to="/about" className="text-white hover:text-leaf-highlight transition-colors flex items-center gap-1">
-                <Info size={18} />
-                <span>{t('about')}</span>
-              </Link>
+        <div className="container mx-auto">
+          <div className="flex justify-between items-center">
+            <div className="flex items-center gap-2">
+              <Leaf className="h-8 w-8" />
+              <h1 className="text-2xl font-playfair font-bold">{t('appName')}</h1>
+            </div>
+            <div className="flex items-center gap-4">
+              <NavigationMenu className="hidden md:block">
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <Link to="/suggestions" className="text-white hover:text-leaf-highlight transition-colors">
+                      {t('suggestions')}
+                    </Link>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem className="ml-4">
+                    <Link to="/about" className="text-white hover:text-leaf-highlight transition-colors">
+                      {t('about')}
+                    </Link>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem className="ml-4">
+                    <Link to="/contact" className="text-white hover:text-leaf-highlight transition-colors">
+                      {t('contact')}
+                    </Link>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem className="ml-4">
+                    <Link to="/plants" className="text-white hover:text-leaf-highlight transition-colors">
+                      {language === 'en' ? 'Plants' : language === 'hi' ? 'पौधे' : 'ಸಸ್ಯಗಳು'}
+                    </Link>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
+              <LanguageSwitcher />
+              {isMobile && (
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="ghost" size="icon" className="text-white">
+                      <Menu />
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="end">
+                    <DropdownMenuItem asChild>
+                      <Link to="/suggestions">{t('suggestions')}</Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem asChild>
+                      <Link to="/about">{t('about')}</Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem asChild>
+                      <Link to="/contact">{t('contact')}</Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem asChild>
+                      <Link to="/plants">{language === 'en' ? 'Plants' : language === 'hi' ? 'पौधे' : 'ಸಸ್ಯಗಳು'}</Link>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              )}
             </div>
           </div>
         </div>
       </header>
+      
+      <main className="container mx-auto px-4 py-12 flex-grow">
+        <section className="mb-8 text-center">
+          <h2 className="text-3xl font-playfair text-leaf-primary font-bold mb-4">
+            {t('identifyPlantDisease')}
+          </h2>
+          <p className="text-lg font-lato text-gray-700">
+            {t('uploadLeafImage')}
+          </p>
+        </section>
 
-      <main className="container mx-auto px-4 py-12 max-w-5xl">
-        {!selectedImage ? (
-          <Card className="bg-white/95 shadow-xl border-leaf-light/20">
-            <CardContent className="pt-8 pb-10 px-6">
-              <div className="text-center mb-10">
-                <h1 className="text-3xl font-playfair font-bold text-leaf-primary mb-4">{t('tagline')}</h1>
-                <p className="text-gray-600 max-w-2xl mx-auto font-lato">{t('uploadInstructions')}</p>
-              </div>
-
-              <div className="max-w-md mx-auto">
-                <ImageUploader 
-                  onImageSelected={handleImageSelected}
-                  isProcessing={isProcessing || isModelLoading}
+        <section className="flex flex-col items-center justify-center mb-8">
+          <Input
+            type="file"
+            accept="image/*"
+            onChange={handleImageUpload}
+            className="hidden"
+            id="upload-image"
+            ref={fileInputRef}
+          />
+          <div className="flex flex-col items-center">
+            {selectedImage ? (
+              <div className="relative w-64 h-64 rounded-full overflow-hidden mb-4">
+                <img
+                  src={selectedImage}
+                  alt="Uploaded"
+                  className="object-cover w-full h-full"
                 />
-              </div>
-            </CardContent>
-          </Card>
-        ) : (
-          <div>
-            {isProcessing ? (
-              <div className="flex flex-col items-center space-y-6 p-8 bg-white/90 rounded-lg shadow">
-                <div className="relative w-32 h-32 overflow-hidden rounded-lg">
-                  <img 
-                    src={selectedImage} 
-                    alt="Uploaded leaf" 
-                    className="w-full h-full object-cover opacity-50"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="animate-pulse-light w-16 h-16 rounded-full bg-leaf-light opacity-75"></div>
-                  </div>
-                </div>
-                
-                <div className="text-center space-y-2">
-                  <h3 className="text-xl font-playfair font-semibold text-leaf-primary">{t('analyzing')}</h3>
-                  <div className="space-y-2 max-w-sm mx-auto">
-                    <Skeleton className="h-4 w-full" />
-                    <Skeleton className="h-4 w-3/4 mx-auto" />
-                  </div>
-                </div>
               </div>
             ) : (
-              prediction && (
-                <ResultsDisplay 
-                  prediction={prediction}
-                  imageData={selectedImage}
-                  onReset={handleReset}
-                />
-              )
+              <Leaf className="h-24 w-24 text-leaf-primary mb-4" />
             )}
+            <Button
+              className="bg-leaf-primary text-white hover:bg-leaf-dark font-lato"
+              onClick={handleButtonClick}
+              disabled={loading}
+            >
+              {loading
+                ? t('identifying') + '...'
+                : t('uploadImage')}
+            </Button>
+            <Label htmlFor="upload-image" className="mt-2 text-sm text-gray-600 cursor-pointer">
+              {t('chooseAnotherImage')}
+            </Label>
           </div>
+        </section>
+
+        {showResults && prediction && (
+          <section className="mt-8 p-6 bg-white rounded-md shadow-md border border-gray-200">
+            <h3 className="text-2xl font-playfair text-leaf-primary font-bold mb-4 text-center">
+              {t('predictionResults')}
+            </h3>
+            <div className="mb-4">
+              <p className="font-lato">
+                <span className="font-bold text-gray-800">{t('disease')}:</span>{' '}
+                {prediction.class}
+              </p>
+            </div>
+            <div>
+              <p className="font-lato">
+                <span className="font-bold text-gray-800">{t('confidence')}:</span>{' '}
+                {(prediction.confidence * 100).toFixed(2)}%
+              </p>
+            </div>
+          </section>
         )}
       </main>
-
+      
       <footer className="bg-gradient-to-r from-leaf-primary to-leaf-dark text-white p-5 mt-auto">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -151,6 +232,9 @@ const Index: React.FC = () => {
               <Link to="/suggestions" className="text-white hover:text-leaf-highlight text-sm transition-colors">{t('suggestions')}</Link>
               <Link to="/contact" className="text-white hover:text-leaf-highlight text-sm transition-colors">{t('contact')}</Link>
               <Link to="/about" className="text-white hover:text-leaf-highlight text-sm transition-colors">{t('about')}</Link>
+              <Link to="/plants" className="text-white hover:text-leaf-highlight text-sm transition-colors">
+                {language === 'en' ? 'Plants' : language === 'hi' ? 'पौधे' : 'ಸಸ್ಯಗಳು'}
+              </Link>
             </div>
           </div>
         </div>

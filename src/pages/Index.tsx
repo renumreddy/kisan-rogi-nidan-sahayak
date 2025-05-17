@@ -1,24 +1,25 @@
+
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Leaf, Menu } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
-import { useToast } from "@/components/ui/use-toast"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+import { useToast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/components/ui/dropdown-menu";
 import {
   NavigationMenu,
   NavigationMenuList,
   NavigationMenuItem,
-} from "@/components/ui/navigation-menu"
+} from "@/components/ui/navigation-menu";
 import LanguageSwitcher from '@/components/LanguageSwitcher';
-import { useMobile } from '@/hooks/useMobile';
+import { useIsMobile } from '@/hooks/use-mobile';
 import axios from 'axios';
 
 interface PredictionResult {
@@ -31,8 +32,8 @@ const Index: React.FC = () => {
   const [prediction, setPrediction] = useState<PredictionResult | null>(null);
   const [loading, setLoading] = useState(false);
   const [showResults, setShowResults] = useState(false);
-  const toast = useToast();
-  const isMobile = useMobile();
+  const { toast } = useToast();
+  const isMobile = useIsMobile();
   
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);

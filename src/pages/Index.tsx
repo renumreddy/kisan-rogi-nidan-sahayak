@@ -1,7 +1,7 @@
 
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Leaf, Menu } from 'lucide-react';
+import { Leaf, Menu, Camera } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
@@ -21,6 +21,7 @@ import {
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { useIsMobile } from '@/hooks/use-mobile';
 import axios from 'axios';
+import ImageUploader from '@/components/ImageUploader';
 
 interface PredictionResult {
   class: string;
@@ -38,31 +39,17 @@ const Index: React.FC = () => {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  const handleImageUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (!file) {
-      toast({
-        title: t('noImageSelected') || 'No image selected',
-        description: t('pleaseSelectAnImage') || 'Please select an image to upload.',
-      });
-      return;
-    }
-
-    if (file.size > 5 * 1024 * 1024) {
-      toast({
-        title: t('imageTooLarge') || 'Image Too Large',
-        description: t('imageMustBeLessThan5MB') || 'Image must be less than 5MB.',
-      });
-      return;
-    }
-
-    const imageUrl = URL.createObjectURL(file);
-    setSelectedImage(imageUrl);
+  const handleImageSelected = async (imageData: string) => {
+    setSelectedImage(imageData);
     setPrediction(null);
     setShowResults(false);
 
+    // For file uploads from the file picker, convert to blob
+    const fetchResponse = await fetch(imageData);
+    const blob = await fetchResponse.blob();
+
     const formData = new FormData();
-    formData.append("image", file);
+    formData.append("image", blob, "image.jpg");
 
     setLoading(true);
     try {
@@ -89,12 +76,6 @@ const Index: React.FC = () => {
     }
   };
 
-  const handleButtonClick = () => {
-    if (fileInputRef.current) {
-      fileInputRef.current.click();
-    }
-  };
-  
   return (
     <div className="min-h-screen natural-leaf-bg flex flex-col">
       <header className="bg-gradient-to-r from-leaf-light to-leaf-primary text-white p-4 shadow-md">
@@ -108,22 +89,34 @@ const Index: React.FC = () => {
               <NavigationMenu className="hidden md:block">
                 <NavigationMenuList>
                   <NavigationMenuItem>
-                    <Link to="/suggestions" className="text-white hover:text-leaf-highlight transition-colors">
+                    <Link 
+                      to="/suggestions" 
+                      className="px-3 py-1.5 rounded-md bg-leaf-primary/20 hover:bg-leaf-primary/40 text-white hover:text-white transition-colors"
+                    >
                       {t('suggestions')}
                     </Link>
                   </NavigationMenuItem>
                   <NavigationMenuItem className="ml-4">
-                    <Link to="/about" className="text-white hover:text-leaf-highlight transition-colors">
+                    <Link 
+                      to="/about" 
+                      className="px-3 py-1.5 rounded-md bg-leaf-primary/20 hover:bg-leaf-primary/40 text-white hover:text-white transition-colors"
+                    >
                       {t('about')}
                     </Link>
                   </NavigationMenuItem>
                   <NavigationMenuItem className="ml-4">
-                    <Link to="/contact" className="text-white hover:text-leaf-highlight transition-colors">
+                    <Link 
+                      to="/contact" 
+                      className="px-3 py-1.5 rounded-md bg-leaf-primary/20 hover:bg-leaf-primary/40 text-white hover:text-white transition-colors"
+                    >
                       {t('contact')}
                     </Link>
                   </NavigationMenuItem>
                   <NavigationMenuItem className="ml-4">
-                    <Link to="/plants" className="text-white hover:text-leaf-highlight transition-colors">
+                    <Link 
+                      to="/plants" 
+                      className="px-3 py-1.5 rounded-md bg-leaf-primary/20 hover:bg-leaf-primary/40 text-white hover:text-white transition-colors"
+                    >
                       {language === 'en' ? 'Plants' : language === 'hi' ? 'पौधे' : 'ಸಸ್ಯಗಳು'}
                     </Link>
                   </NavigationMenuItem>
@@ -169,14 +162,6 @@ const Index: React.FC = () => {
         </section>
 
         <section className="flex flex-col items-center justify-center mb-8">
-          <Input
-            type="file"
-            accept="image/*"
-            onChange={handleImageUpload}
-            className="hidden"
-            id="upload-image"
-            ref={fileInputRef}
-          />
           <div className="flex flex-col items-center">
             {selectedImage ? (
               <div className="relative w-64 h-64 rounded-full overflow-hidden mb-4">
@@ -189,18 +174,11 @@ const Index: React.FC = () => {
             ) : (
               <Leaf className="h-24 w-24 text-leaf-primary mb-4" />
             )}
-            <Button
-              className="bg-leaf-primary text-white hover:bg-leaf-dark font-lato"
-              onClick={handleButtonClick}
-              disabled={loading}
-            >
-              {loading
-                ? t('identifying') + '...'
-                : t('uploadImage')}
-            </Button>
-            <Label htmlFor="upload-image" className="mt-2 text-sm text-gray-600 cursor-pointer">
-              {t('chooseAnotherImage')}
-            </Label>
+            
+            <ImageUploader 
+              onImageSelected={handleImageSelected}
+              isProcessing={loading}
+            />
           </div>
         </section>
 

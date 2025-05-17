@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -54,7 +53,7 @@ const Plants: React.FC = () => {
         hi: 'टमाटर',
         kn: 'ಟೊಮೇಟೊ'
       },
-      image: 'https://images.unsplash.com/photo-1592841200221-a6898f307baa?q=80&w=2187&auto=format&fit=crop&ixlib=rb-4.0.3',
+      image: 'https://images.pexels.com/photos/533280/pexels-photo-533280.jpeg?auto=compress&cs=tinysrgb&w=600',
       basicCare: {
         en: 'Water consistently, provide 6-8 hours of sunlight daily. Plant in well-draining soil rich in organic matter.',
         hi: 'नियमित रूप से पानी दें, दैनिक 6-8 घंटे धूप प्रदान करें। जैविक पदार्थों से भरपूर अच्छी जल निकासी वाली मिट्टी में लगाएं।',
@@ -78,7 +77,7 @@ const Plants: React.FC = () => {
         hi: 'तुलसी',
         kn: 'ತುಳಸಿ'
       },
-      image: 'https://images.unsplash.com/photo-1601648764658-cf37e8c89b70?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3',
+      image: 'https://images.pexels.com/photos/5503107/pexels-photo-5503107.jpeg?auto=compress&cs=tinysrgb&w=600',
       basicCare: {
         en: 'Water when soil feels dry, place in bright, indirect light. Keep soil consistently moist but not soggy.',
         hi: 'जब मिट्टी सूखी महसूस हो तो पानी दें, उज्ज्वल, अप्रत्यक्ष प्रकाश में रखें। मिट्टी को लगातार नम रखें लेकिन गीला न होने दें।',
@@ -102,7 +101,7 @@ const Plants: React.FC = () => {
         hi: 'गुलाब',
         kn: 'ಗುಲಾಬಿ'
       },
-      image: 'https://images.unsplash.com/photo-1596073419667-9d77d59f033f?q=80&w=2035&auto=format&fit=crop&ixlib=rb-4.0.3',
+      image: 'https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=600',
       basicCare: {
         en: 'Water at the base of the plant in the morning, provide 6+ hours of sunlight. Mulch to retain moisture.',
         hi: 'सुबह में पौधे के आधार पर पानी दें, 6+ घंटे धूप प्रदान करें। नमी बनाए रखने के लिए मल्च करें।',
@@ -126,7 +125,7 @@ const Plants: React.FC = () => {
         hi: 'मांसल पौधा',
         kn: 'ಸಕ್ಯುಲೆಂಟ್'
       },
-      image: 'https://images.unsplash.com/photo-1463936575829-25148e1db1b8?q=80&w=2090&auto=format&fit=crop&ixlib=rb-4.0.3',
+      image: 'https://images.pexels.com/photos/1470171/pexels-photo-1470171.jpeg?auto=compress&cs=tinysrgb&w=600',
       basicCare: {
         en: 'Water only when soil is completely dry, provide bright light. Use well-draining cactus/succulent soil.',
         hi: 'केवल तब पानी दें जब मिट्टी पूरी तरह से सूखी हो, तेज़ रोशनी प्रदान करें। अच्छी जल निकासी वाली कैक्टस/मांसल मिट्टी का उपयोग करें।',
@@ -150,7 +149,7 @@ const Plants: React.FC = () => {
         hi: 'मॉन्स्टेरा',
         kn: 'ಮಾನ್ಸ್ಟೆರಾ'
       },
-      image: 'https://images.unsplash.com/photo-1637967886160-fd0748161c13?q=80&w=1940&auto=format&fit=crop&ixlib=rb-4.0.3',
+      image: 'https://images.pexels.com/photos/3655327/pexels-photo-3655327.jpeg?auto=compress&cs=tinysrgb&w=600',
       basicCare: {
         en: 'Water when top inch of soil is dry, provide bright indirect light. High humidity preferred.',
         hi: 'जब मिट्टी की ऊपरी इंच सूखी हो तो पानी दें, उज्ज्वल अप्रत्यक्ष प्रकाश प्रदान करें। उच्च आर्द्रता पसंद की जाती है।',
@@ -174,7 +173,7 @@ const Plants: React.FC = () => {
         hi: 'पीस लिली',
         kn: 'ಪೀಸ್ ಲಿಲ್ಲಿ'
       },
-      image: 'https://images.unsplash.com/photo-1591454371758-644f9d123a81?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3',
+      image: 'https://images.pexels.com/photos/993018/pexels-photo-993018.jpeg?auto=compress&cs=tinysrgb&w=600',
       basicCare: {
         en: 'Keep soil consistently moist but not soggy. Thrives in low to medium indirect light. Loves humidity.',
         hi: 'मिट्टी को लगातार नम रखें लेकिन गीला न होने दें। कम से मध्यम अप्रत्यक्ष प्रकाश में पनपती है। आर्द्रता पसंद करती है।',
@@ -198,7 +197,7 @@ const Plants: React.FC = () => {
         hi: 'लैवेंडर',
         kn: 'ಲ್ಯಾವೆಂಡರ್'
       },
-      image: 'https://images.unsplash.com/photo-1569086426844-2843f037de4c?q=80&w=2035&auto=format&fit=crop&ixlib=rb-4.0.3',
+      image: 'https://images.pexels.com/photos/158639/pomegranate-open-succulent-fruit-seed-158639.jpeg?auto=compress&cs=tinysrgb&w=600',
       basicCare: {
         en: 'Water when soil is dry, provide full sun (6+ hours daily). Requires excellent drainage and sandy soil.',
         hi: 'जब मिट्टी सूखी हो तब पानी दें, पूर्ण धूप प्रदान करें (दैनिक 6+ घंटे)। उत्कृष्ट जल निकासी और रेतीली मिट्टी की आवश्यकता होती है।',
@@ -222,7 +221,7 @@ const Plants: React.FC = () => {
         hi: 'एलोवेरा',
         kn: 'ಅಲೋವೇರಾ'
       },
-      image: 'https://images.unsplash.com/photo-1596547609061-35c9587d5faa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3',
+      image: 'https://images.pexels.com/photos/4198470/pexels-photo-4198470.jpeg?auto=compress&cs=tinysrgb&w=600',
       basicCare: {
         en: 'Water deeply but infrequently, allowing soil to dry completely between waterings. Bright indirect light.',
         hi: 'गहराई से लेकिन अनियमित रूप से पानी दें, पानी देने के बीच मिट्टी को पूरी तरह से सूखने दें। उज्ज्वल अप्रत्यक्ष प्रकाश।',
@@ -301,6 +300,7 @@ const Plants: React.FC = () => {
                       src={plant.image} 
                       alt={plant.name[language]} 
                       className="w-full h-full object-cover transition-transform hover:scale-105"
+                      loading="lazy"
                     />
                   </div>
                   <CardHeader className="pb-2">
@@ -357,6 +357,7 @@ const Plants: React.FC = () => {
                         src={plant.image} 
                         alt={plant.name[language]} 
                         className="w-full h-full object-cover"
+                        loading="lazy"
                       />
                     </div>
                     <div className="md:w-2/3">

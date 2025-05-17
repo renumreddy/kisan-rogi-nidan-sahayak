@@ -43,7 +43,7 @@ const Suggestions: React.FC = () => {
   ];
   
   return (
-    <div className="min-h-screen natural-leaf-bg">
+    <div className="min-h-screen natural-leaf-bg flex flex-col">
       <header className="bg-gradient-to-r from-leaf-light to-leaf-primary text-white p-4 shadow-md">
         <div className="container mx-auto">
           <Link to="/" className="flex items-center gap-2 text-white hover:text-leaf-highlight transition-colors w-fit">
@@ -53,7 +53,7 @@ const Suggestions: React.FC = () => {
         </div>
       </header>
 
-      <main className="container mx-auto px-4 py-12 max-w-5xl">
+      <main className="container mx-auto px-4 py-12 max-w-5xl flex-grow">
         <Card className="bg-white/95 shadow-xl border-leaf-light/20">
           <CardHeader>
             <CardTitle className="text-2xl font-playfair text-leaf-primary text-center">{t('suggestionTitle')}</CardTitle>
@@ -98,6 +98,8 @@ const Suggestions: React.FC = () => {
                         <li><strong>Bacillus thuringiensis (Bt):</strong> {t('btDescription')}</li>
                         <li><strong>Horticultural Oil:</strong> {t('hortOilDescription')}</li>
                         <li><strong>Insecticidal Soap:</strong> {t('soapDescription')}</li>
+                        <li><strong>Azadirachtin:</strong> {t('azadirachtinDescription')}</li>
+                        <li><strong>Diatomaceous Earth:</strong> {t('diatomaceousEarthDescription')}</li>
                       </ul>
                     </div>
                     
@@ -108,6 +110,10 @@ const Suggestions: React.FC = () => {
                         <li><strong>Sulfur:</strong> {t('sulfurDescription')}</li>
                         <li><strong>Pyrethrin:</strong> {t('pyrethrinDescription')}</li>
                         <li><strong>Spinosad:</strong> {t('spinosadDescription')}</li>
+                        <li><strong>Chlorothalonil:</strong> Broad-spectrum fungicide that prevents disease by protecting plant tissue.</li>
+                        <li><strong>Mancozeb:</strong> Protective fungicide effective against a wide range of fungi.</li>
+                        <li><strong>Propiconazole:</strong> Systemic fungicide that moves through the plant to control various diseases.</li>
+                        <li><strong>Azoxystrobin:</strong> Strobilurin fungicide with preventative and curative action against many fungal diseases.</li>
                       </ul>
                     </div>
                   </div>

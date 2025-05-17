@@ -133,6 +133,184 @@ const translations: TranslationDict = {
     hi: 'पुष्टि करें',
     kn: 'ದೃಢೀಕರಿಸಿ',
   },
+  // About page translations
+  aboutTitle: {
+    en: 'About LeafDoctor',
+    hi: 'लीफडॉक्टर के बारे में',
+    kn: 'ಎಲೆ ಡಾಕ್ಟರ್ ಬಗ್ಗೆ',
+  },
+  aboutMission: {
+    en: 'Our Mission',
+    hi: 'हमारा मिशन',
+    kn: 'ನಮ್ಮ ಮಿಷನ್',
+  },
+  howItWorks: {
+    en: 'How It Works',
+    hi: 'यह कैसे काम करता है',
+    kn: 'ಇದು ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ',
+  },
+  supportedCrops: {
+    en: 'Supported Crops',
+    hi: 'समर्थित फसलें',
+    kn: 'ಬೆಂಬಲಿತ ಬೆಳೆಗಳು',
+  },
+  privacyPolicy: {
+    en: 'Privacy Policy',
+    hi: 'गोपनीयता नीति',
+    kn: 'ಗೌಪ್ಯತಾ ನೀತಿ',
+  },
+  // Contact page translations
+  contactTitle: {
+    en: 'Contact Us',
+    hi: 'हमसे संपर्क करें',
+    kn: 'ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ',
+  },
+  contactDescription: {
+    en: 'Have questions or feedback? We would love to hear from you.',
+    hi: 'कोई प्रश्न या प्रतिक्रिया है? हम आपसे सुनना पसंद करेंगे।',
+    kn: 'ಪ್ರಶ್ನೆಗಳು ಅಥವಾ ಪ್ರತಿಕ್ರಿಯೆಗಳಿವೆಯೇ? ನಿಮ್ಮಿಂದ ಕೇಳಲು ನಾವು ಇಷ್ಟಪಡುತ್ತೇವೆ.',
+  },
+  name: {
+    en: 'Name',
+    hi: 'नाम',
+    kn: 'ಹೆಸರು',
+  },
+  email: {
+    en: 'Email',
+    hi: 'ईमेल',
+    kn: 'ಇಮೇಲ್',
+  },
+  message: {
+    en: 'Message',
+    hi: 'संदेश',
+    kn: 'ಸಂದೇಶ',
+  },
+  submit: {
+    en: 'Submit',
+    hi: 'जमा करें',
+    kn: 'ಸಲ್ಲಿಸಿ',
+  },
+  messageSent: {
+    en: 'Message Sent',
+    hi: 'संदेश भेजा गया',
+    kn: 'ಸಂದೇಶ ಕಳುಹಿಸಲಾಗಿದೆ',
+  },
+  messageResponse: {
+    en: 'Thank you for your message. We will get back to you soon.',
+    hi: 'आपके संदेश के लिए धन्यवाद। हम जल्द ही आपसे संपर्क करेंगे।',
+    kn: 'ನಿಮ್ಮ ಸಂದೇಶಕ್ಕೆ ಧನ್ಯವಾದಗಳು. ನಾವು ಶೀಘ್ರದಲ್ಲೇ ನಿಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸುತ್ತೇವೆ.',
+  },
+  // Suggestions page translations
+  suggestionTitle: {
+    en: 'Plant Care Suggestions',
+    hi: 'पौधों की देखभाल के सुझाव',
+    kn: 'ಸಸ್ಯ ಆರೈಕೆ ಸಲಹೆಗಳು',
+  },
+  suggestionDescription: {
+    en: 'Common plant diseases and recommended treatments to keep your plants healthy.',
+    hi: 'आपके पौधों को स्वस्थ रखने के लिए सामान्य पौधों के रोग और अनुशंसित उपचार।',
+    kn: 'ನಿಮ್ಮ ಸಸ್ಯಗಳನ್ನು ಆರೋಗ್ಯಕರವಾಗಿ ಇರಿಸಲು ಸಾಮಾನ್ಯ ಸಸ್ಯ ರೋಗಗಳು ಮತ್ತು ಶಿಫಾರಸು ಮಾಡಿದ ಚಿಕಿತ್ಸೆಗಳು.',
+  },
+  commonDiseases: {
+    en: 'Common Diseases',
+    hi: 'सामान्य रोग',
+    kn: 'ಸಾಮಾನ್ಯ ರೋಗಗಳು',
+  },
+  recommendedPesticides: {
+    en: 'Recommended Pesticides',
+    hi: 'अनुशंसित कीटनाशक',
+    kn: 'ಶಿಫಾರಸು ಮಾಡಿದ ಕೀಟನಾಶಕಗಳು',
+  },
+  description: {
+    en: 'Description',
+    hi: 'विवरण',
+    kn: 'ವಿವರಣೆ',
+  },
+  prevention: {
+    en: 'Prevention',
+    hi: 'रोकथाम',
+    kn: 'ತಡೆಗಟ್ಟುವಿಕೆ',
+  },
+  organicOptions: {
+    en: 'Organic Options',
+    hi: 'जैविक विकल्प',
+    kn: 'ಸಾವಯವ ಆಯ್ಕೆಗಳು',
+  },
+  chemicalOptions: {
+    en: 'Chemical Options',
+    hi: 'रासायनिक विकल्प',
+    kn: 'ರಾಸಾಯನಿಕ ಆಯ್ಕೆಗಳು',
+  },
+  neemDescription: {
+    en: 'Natural insecticide effective against many pests while relatively safe for beneficial insects.',
+    hi: 'कई कीटों के खिलाफ प्रभावी प्राकृतिक कीटनाशक जो लाभकारी कीड़ों के लिए अपेक्षाकृत सुरक्षित है।',
+    kn: 'ಅನೇಕ ಕೀಟಗಳ ವಿರುದ್ಧ ಪರಿಣಾಮಕಾರಿಯಾದ ನೈಸರ್ಗಿಕ ಕೀಟನಾಶಕ, ಪ್ರಯೋಜನಕಾರಿ ಕೀಟಗಳಿಗೆ ತುಲನಾತ್ಮಕವಾಗಿ ಸುರಕ್ಷಿತವಾಗಿರುತ್ತದೆ.',
+  },
+  btDescription: {
+    en: 'Natural soil-dwelling bacterium that controls caterpillars, beetles, and fly larvae.',
+    hi: 'प्राकृतिक मिट्टी में रहने वाले जीवाणु जो कैटरपिलर, बीटल और मक्खी लार्वा को नियंत्रित करते हैं।',
+    kn: 'ಕ್ಯಾಟರ್‌ಪಿಲ್ಲರ್‌ಗಳು, ಬೀಟಲ್‌ಗಳು ಮತ್ತು ನೊಣದ ಲಾರ್ವಾಗಳನ್ನು ನಿಯಂತ್ರಿಸುವ ನೈಸರ್ಗಿಕ ಮಣ್ಣಿನಲ್ಲಿ ವಾಸಿಸುವ ಬ್ಯಾಕ್ಟೀರಿಯಾ.',
+  },
+  hortOilDescription: {
+    en: 'Refined mineral oils that control insects and mites by smothering them.',
+    hi: 'परिष्कृत खनिज तेल जो कीड़ों और माइट्स को दम घुटाकर नियंत्रित करते हैं।',
+    kn: 'ಕೀಟಗಳು ಮತ್ತು ಮೈಟ್‌ಗಳನ್ನು ಉಸಿರುಕಟ್ಟಿಸುವ ಮೂಲಕ ನಿಯಂತ್ರಿಸುವ ಸಂಸ್ಕರಿಸಿದ ಖನಿಜ ಎಣ್ಣೆಗಳು.',
+  },
+  soapDescription: {
+    en: 'Potassium salt-based products that disrupt insect cell membranes and dehydrate soft-bodied pests.',
+    hi: 'पोटैशियम लवण-आधारित उत्पाद जो कीड़ों की कोशिका झिल्ली को बाधित करते हैं और नरम शरीर वाले कीड़ों को निर्जलित करते हैं।',
+    kn: 'ಕೀಟದ ಕೋಶ ಪದರಗಳನ್ನು ಅಡ್ಡಿಪಡಿಸುವ ಮತ್ತು ಮೃದು-ದೇಹದ ಕೀಟಗಳನ್ನು ನಿರ್ಜಲೀಕರಣಗೊಳಿಸುವ ಪೊಟಾಷಿಯಂ ಲವಣ-ಆಧಾರಿತ ಉತ್ಪನ್ನಗಳು.',
+  },
+  copperDescription: {
+    en: 'Broad-spectrum fungicide that prevents spore germination. Effective against many fungal and bacterial diseases.',
+    hi: 'व्यापक स्पेक्ट्रम वाला कवकनाशी जो बीजाणु अंकुरण को रोकता है। कई कवक और जीवाणु रोगों के खिलाफ प्रभावी।',
+    kn: 'ಬೀಜಾಣು ಮೊಳಕೆಯೊಡೆಯುವಿಕೆಯನ್ನು ತಡೆಯುವ ವ್ಯಾಪಕ ವ್ಯಾಪ್ತಿಯ ಫಂಗಿಸೈಡ್. ಅನೇಕ ಶಿಲೀಂಧ್ರ ಮತ್ತು ಬ್ಯಾಕ್ಟೀರಿಯಲ್ ರೋಗಗಳ ವಿರುದ್ಧ ಪರಿಣಾಮಕಾರಿ.',
+  },
+  sulfurDescription: {
+    en: 'Controls powdery mildew, rusts, and other fungal diseases. Also effective against some mites.',
+    hi: 'पाउडरी मिल्ड्यू, रस्ट और अन्य कवक रोगों को नियंत्रित करता है। कुछ माइट्स के खिलाफ भी प्रभावी।',
+    kn: 'ಪುಡಿ ಮಿಲ್ಡ್ಯೂ, ರಸ್ಟ್‌ಗಳು ಮತ್ತು ಇತರ ಶಿಲೀಂಧ್ರ ರೋಗಗಳನ್ನು ನಿಯಂತ್ರಿಸುತ್ತದೆ. ಕೆಲವು ಮೈಟ್‌ಗಳ ವಿರುದ್ಧವೂ ಪರಿಣಾಮಕಾರಿಯಾಗಿದೆ.',
+  },
+  pyrethrinDescription: {
+    en: 'Natural insecticide derived from chrysanthemum flowers, effective against a wide range of pests.',
+    hi: 'गुलदाउदी के फूलों से प्राप्त प्राकृतिक कीटनाशक, विभिन्न प्रकार के कीटों के खिलाफ प्रभावी।',
+    kn: 'ಕ್ರಿಸಾಂತಿಮಮ್ ಹೂವುಗಳಿಂದ ಪಡೆದ ನೈಸರ್ಗಿಕ ಕೀಟನಾಶಕ, ವ್ಯಾಪಕ ಶ್ರೇಣಿಯ ಕೀಟಗಳ ವಿರುದ್ಧ ಪರಿಣಾಮಕಾರಿಯಾಗಿದೆ.',
+  },
+  spinosadDescription: {
+    en: 'Derived from soil bacteria, controls caterpillars, thrips, and other pests while being less harmful to beneficial insects.',
+    hi: 'मिट्टी के बैक्टीरिया से प्राप्त, कैटरपिलर, थ्रिप्स और अन्य कीटों को नियंत्रित करता है, जबकि लाभकारी कीड़ों के लिए कम हानिकारक होता है।',
+    kn: 'ಮಣ್ಣಿನ ಬ್ಯಾಕ್ಟೀರಿಯಾದಿಂದ ಪಡೆದುಕೊಳ್ಳಲಾಗಿದೆ, ಪ್ರಯೋಜನಕಾರಿ ಕೀಟಗಳಿಗೆ ಕಡಿಮೆ ಹಾನಿಕಾರಕವಾಗಿರುವಾಗ ಕ್ಯಾಟರ್‌ಪಿಲ್ಲರ್‌ಗಳು, ತ್ರಿಪ್ಸ್‌ಗಳು ಮತ್ತು ಇತರ ಕೀಟಗಳನ್ನು ನಿಯಂತ್ರಿಸುತ್ತದೆ.',
+  },
+  azadirachtinDescription: {
+    en: 'Extracted from neem seeds, disrupts insect growth and feeding. Effective against many pests while preserving beneficial insects.',
+    hi: 'नीम के बीजों से निकाला गया, कीड़ों के विकास और भोजन को बाधित करता है। लाभकारी कीड़ों को संरक्षित करते हुए कई कीटों के खिलाफ प्रभावी।',
+    kn: 'ಬೇವಿನ ಬೀಜಗಳಿಂದ ಹೊರತೆಗೆಯಲಾಗಿದೆ, ಕೀಟಗಳ ಬೆಳವಣಿಗೆ ಮತ್ತು ಆಹಾರ ಸೇವನೆಯನ್ನು ಅಡ್ಡಿಪಡಿಸುತ್ತದೆ. ಪ್ರಯೋಜನಕಾರಿ ಕೀಟಗಳನ್ನು ಸಂರಕ್ಷಿಸುತ್ತಿರುವಾಗಲೂ ಅನೇಕ ಕೀಟಗಳ ವಿರುದ್ಧ ಪರಿಣಾಮಕಾರಿಯಾಗಿದೆ.',
+  },
+  diatomaceousEarthDescription: {
+    en: 'Fine powder made from fossilized algae that damages insect exoskeletons causing dehydration.',
+    hi: 'जीवाश्म शैवाल से बना महीन पाउडर जो कीड़ों के बाहरी कंकाल को नुकसान पहुंचाकर निर्जलीकरण का कारण बनता है।',
+    kn: 'ಜೀವಾಶ್ಮ ಪಾಚಿಗಳಿಂದ ಮಾಡಿದ ಸೂಕ್ಷ್ಮ ಪುಡಿ, ಕೀಟಗಳ ಬಾಹ್ಯ ಕಂಕಾಲದ ಕವಚಕ್ಕೆ ಹಾನಿ ಮಾಡುವುದರಿಂದ ನಿರ್ಜಲೀಕರಣವನ್ನು ಉಂಟುಮಾಡುತ್ತದೆ.',
+  },
+  backToHome: {
+    en: 'Back to Home',
+    hi: 'होम पेज पर वापस जाएं',
+    kn: 'ಮುಖಪುಟಕ್ಕೆ ಹಿಂತಿರುಗಿ',
+  },
+  about: {
+    en: 'About',
+    hi: 'परिचय',
+    kn: 'ಬಗ್ಗೆ',
+  },
+  contact: {
+    en: 'Contact',
+    hi: 'संपर्क',
+    kn: 'ಸಂಪರ್ಕಿಸಿ',
+  },
+  suggestions: {
+    en: 'Suggestions',
+    hi: 'सुझाव',
+    kn: 'ಸಲಹೆಗಳು',
+  },
 };
 
 // Translations for specific diseases
@@ -231,39 +409,39 @@ export const pesticideTranslations: TranslationDict = {
     kn: 'ಕೀಟನಾಶಕಗಳ ಅಗತ್ಯವಿಲ್ಲ.',
   },
   'Apple Scab': {
-    en: 'Captan, Myclobutanil (Rally), Propiconazole, Chlorothalonil, or organic options like Neem oil or Sulfur spray.',
-    hi: 'कैप्टन, माइक्लोबुटानिल (रैली), प्रोपिकोनाज़ोल, क्लोरोथैलोनिल, या नीम का तेल या सल्फर स्प्रे जैसे जैविक विकल्प।',
-    kn: 'ಕ್ಯಾಪ್ಟನ್, ಮೈಕ್ಲೋಬುಟಾನಿಲ್ (ರ್ಯಾಲಿ), ಪ್ರೊಪಿಕೊನಾಜೊಲ್, ಕ್ಲೋರೊಥಾಲೊನಿಲ್, ಅಥವಾ ಸಾವಯವ ಆಯ್ಕೆಗಳಾದ ಬೇವಿನ ಎಣ್ಣೆ ಅಥವಾ ಗಂಧಕ ಸ್ಪ್ರೇ.',
+    en: 'Captan, Myclobutanil (Rally), Propiconazole, Chlorothalonil, or organic options like Neem oil or Sulfur spray. For severe cases, consider Azoxystrobin or Trifloxystrobin.',
+    hi: 'कैप्टन, माइक्लोबुटानिल (रैली), प्रोपिकोनाज़ोल, क्लोरोथैलोनिल, या नीम का तेल या सल्फर स्प्रे जैसे जैविक विकल्प। गंभीर मामलों के लिए, एज़ोक्सिस्ट्रोबिन या ट्राइफ्लोक्सिस्ट्रोबिन पर विचार करें।',
+    kn: 'ಕ್ಯಾಪ್ಟನ್, ಮೈಕ್ಲೋಬುಟಾನಿಲ್ (ರ್ಯಾಲಿ), ಪ್ರೊಪಿಕೊನಾಜೊಲ್, ಕ್ಲೋರೊಥಾಲೊನಿಲ್, ಅಥವಾ ಸಾವಯವ ಆಯ್ಕೆಗಳಾದ ಬೇವಿನ ಎಣ್ಣೆ ಅಥವಾ ಗಂಧಕ ಸ್ಪ್ರೇ. ತೀವ್ರ ಪ್ರಕರಣಗಳಿಗೆ, ಅಜೋಕ್ಸಿಸ್ಟ್ರೋಬಿನ್ ಅಥವಾ ಟ್ರೈಫ್ಲೋಕ್ಸಿಸ್ಟ್ರೋಬಿನ್ ಅನ್ನು ಪರಿಗಣಿಸಿ.',
   },
   'Black Rot': {
-    en: 'Mancozeb, Captan, Myclobutanil, or organic Bacillus subtilis products.',
-    hi: 'मैंकोज़ेब, कैप्टन, माइक्लोबुटानिल, या जैविक बैसिलस सबटिलिस उत्पाद।',
-    kn: 'ಮ್ಯಾಂಕೋಜೆಬ್, ಕ್ಯಾಪ್ಟನ್, ಮೈಕ್ಲೋಬುಟಾನಿಲ್, ಅಥವಾ ಸಾವಯವ ಬ್ಯಾಸಿಲಸ್ ಸಬ್ಟಿಲಿಸ್ ಉತ್ಪನ್ನಗಳು.',
+    en: 'Mancozeb, Captan, Myclobutanil, or organic Bacillus subtilis products. For prevention, consider copper-based fungicides or potassium bicarbonate sprays.',
+    hi: 'मैंकोज़ेब, कैप्टन, माइक्लोबुटानिल, या जैविक बैसिलस सबटिलिस उत्पाद। रोकथाम के लिए, कॉपर-आधारित कवकनाशी या पोटैशियम बाइकार्बोनेट स्प्रे पर विचार करें।',
+    kn: 'ಮ್ಯಾಂಕೋಜೆಬ್, ಕ್ಯಾಪ್ಟನ್, ಮೈಕ್ಲೋಬುಟಾನಿಲ್, ಅಥವಾ ಸಾವಯವ ಬ್ಯಾಸಿಲಸ್ ಸಬ್ಟಿಲಿಸ್ ಉತ್ಪನ್ನಗಳು. ತಡೆಗಟ್ಟಲು, ತಾಮ್ರ-ಆಧಾರಿತ ಫಂಗಿಸೈಡ್‌ಗಳು ಅಥವಾ ಪೊಟ್ಯಾಷಿಯಂ ಬೈಕಾರ್ಬೊನೇಟ್ ಸ್ಪ್ರೇಗಳನ್ನು ಪರಿಗಣಿಸಿ.',
   },
   'Cedar Apple Rust': {
-    en: 'Propiconazole, Myclobutanil, Mancozeb, or organic sulfur-based sprays.',
-    hi: 'प्रोपिकोनाज़ोल, माइक्लोबुटानिल, मैंकोज़ेब, या जैविक सल्फर-आधारित स्प्रे।',
-    kn: 'ಪ್ರೊಪಿಕೊನಾಜೊಲ್, ಮೈಕ್ಲೋಬುಟಾನಿಲ್, ಮ್ಯಾಂಕೋಜೆಬ್, ಅಥವಾ ಸಾವಯವ ಗಂಧಕ-ಆಧಾರಿತ ಸ್ಪ್ರೇಗಳು.',
+    en: 'Propiconazole, Myclobutanil, Mancozeb, or organic sulfur-based sprays. Additional options include Fenarimol and Triadimefon for severe infections.',
+    hi: 'प्रोपिकोनाज़ोल, माइक्लोबुटानिल, मैंकोज़ेब, या जैविक सल्फर-आधारित स्प्रे। गंभीर संक्रमणों के लिए अतिरिक्त विकल्पों में फेनारिमोल और ट्रायडिमेफॉन शामिल हैं।',
+    kn: 'ಪ್ರೊಪಿಕೊನಾಜೊಲ್, ಮೈಕ್ಲೋಬುಟಾನಿಲ್, ಮ್ಯಾಂಕೋಜೆಬ್, ಅಥವಾ ಸಾವಯವ ಗಂಧಕ-ಆಧಾರಿತ ಸ್ಪ್ರೇಗಳು. ಹೆಚ್ಚುವರಿ ಆಯ್ಕೆಗಳಲ್ಲಿ ತೀವ್ರ ಸೋಂಕುಗಳಿಗೆ ಫೆನಾರಿಮೋಲ್ ಮತ್ತು ಟ್ರಯಾಡಿಮೆಫಾನ್ ಸೇರಿವೆ.',
   },
   'Early Blight': {
-    en: 'Chlorothalonil, Mancozeb, Azoxystrobin, Copper fungicides, or organic copper-based products.',
-    hi: 'क्लोरोथैलोनिल, मैंकोज़ेब, अज़ोक्सिस्ट्रोबिन, कॉपर कवकनाशी, या जैविक कॉपर-आधारित उत्पाद।',
-    kn: 'ಕ್ಲೋರೊಥಾಲೊನಿಲ್, ಮ್ಯಾಂಕೋಜೆಬ್, ಅಜೋಕ್ಸಿಸ್ಟ್ರೋಬಿನ್, ತಾಮ್ರದ ಫಂಗಿಸೈಡ್‌ಗಳು, ಅಥವಾ ಸಾವಯವ ತಾಮ್ರ-ಆಧಾರಿತ ಉತ್ಪನ್ನಗಳು.',
+    en: 'Chlorothalonil, Mancozeb, Azoxystrobin, Copper fungicides, or organic copper-based products. Boscalid and Pyraclostrobin mixtures are also effective for severe cases.',
+    hi: 'क्लोरोथैलोनिल, मैंकोज़ेब, अज़ोक्सिस्ट्रोबिन, कॉपर कवकनाशी, या जैविक कॉपर-आधारित उत्पाद। गंभीर मामलों के लिए बोस्कालिड और पाइराक्लोस्ट्रोबिन मिश्रण भी प्रभावी हैं।',
+    kn: 'ಕ್ಲೋರೊಥಾಲೊನಿಲ್, ಮ್ಯಾಂಕೋಜೆಬ್, ಅಜೋಕ್ಸಿಸ್ಟ್ರೋಬಿನ್, ತಾಮ್ರದ ಫಂಗಿಸೈಡ್‌ಗಳು, ಅಥವಾ ಸಾವಯವ ತಾಮ್ರ-ಆಧಾರಿತ ಉತ್ಪನ್ನಗಳು. ಬೋಸ್ಕಾಲಿಡ್ ಮತ್ತು ಪೈರಾಕ್ಲೋಸ್ಟ್ರೋಬಿನ್ ಮಿಶ್ರಣಗಳು ಸಹ ತೀವ್ರ ಪ್ರಕರಣಗಳಿಗೆ ಪರಿಣಾಮಕಾರಿಯಾಗಿದೆ.',
   },
   'Late Blight': {
-    en: 'Chlorothalonil, Mancozeb, Copper fungicides, or organic options like copper hydroxide or copper oxychloride.',
-    hi: 'क्लोरोथैलोनिल, मैंकोज़ेब, कॉपर कवकनाशी, या कॉपर हाइड्रॉक्साइड या कॉपर ऑक्सीक्लोराइड जैसे जैविक विकल्प।',
-    kn: 'ಕ್ಲೋರೊಥಾಲೊನಿಲ್, ಮ್ಯಾಂಕೋಜೆಬ್, ತಾಮ್ರದ ಫಂಗಿಸೈಡ್‌ಗಳು, ಅಥವಾ ಸಾವಯವ ಆಯ್ಕೆಗಳಾದ ತಾಮ್ರದ ಹೈಡ್ರಾಕ್ಸೈಡ್ ಅಥವಾ ತಾಮ್ರದ ಆಕ್ಸಿಕ್ಲೋರೈಡ್.',
+    en: 'Chlorothalonil, Mancozeb, Copper fungicides, or organic options like copper hydroxide or copper oxychloride. For severe outbreaks, consider Cymoxanil, Dimethomorph, or Fluopicolide.',
+    hi: 'क्लोरोथैलोनिल, मैंकोज़ेब, कॉपर कवकनाशी, या कॉपर हाइड्रॉक्साइड या कॉपर ऑक्सीक्लोराइड जैसे जैविक विकल्प। गंभीर प्रकोपों के लिए, साइमोक्सानिल, डाइमेथोमोर्फ, या फ्लुओपिकोलाइड पर विचार करें।',
+    kn: 'ಕ್ಲೋರೊಥಾಲೊನಿಲ್, ಮ್ಯಾಂಕೋಜೆಬ್, ತಾಮ್ರದ ಫಂಗಿಸೈಡ್‌ಗಳು, ಅಥವಾ ಸಾವಯವ ಆಯ್ಕೆಗಳಾದ ತಾಮ್ರದ ಹೈಡ್ರಾಕ್ಸೈಡ್ ಅಥವಾ ತಾಮ್ರದ ಆಕ್ಸಿಕ್ಲೋರೈಡ್. ತೀವ್ರ ಒಡೆತಗಳಿಗೆ, ಸೈಮೋಕ್ಸಾನಿಲ್, ಡೈಮೆಥೊಮೋರ್ಫ್, ಅಥವಾ ಫ್ಲುಓಪಿಕೊಲೈಡ್ ಅನ್ನು ಪರಿಗಣಿಸಿ.',
   },
   'Leaf Spot': {
-    en: 'Mancozeb, Chlorothalonil, Thiophanate-methyl, or organic alternatives like neem oil or copper-based fungicides.',
-    hi: 'मैंकोज़ेब, क्लोरोथैलोनिल, थायोफैनेट-मिथाइल, या नीम का तेल या कॉपर-आधारित कवकनाशी जैसे जैविक विकल्प।',
-    kn: 'ಮ್ಯಾಂಕೋಜೆಬ್, ಕ್ಲೋರೊಥಾಲೊನಿಲ್, ಥಯೋಫಾನೇಟ್-ಮೆಥೈಲ್, ಅಥವಾ ಬೇವಿನ ಎಣ್ಣೆ ಅಥವಾ ತಾಮ್ರ-ಆಧಾರಿತ ಫಂಗಿಸೈಡ್‌ಗಳಂತಹ ಸಾವಯವ ಪರ್ಯಾಯಗಳು.',
+    en: 'Mancozeb, Chlorothalonil, Thiophanate-methyl, or organic alternatives like neem oil or copper-based fungicides. For persistent infections, try Tebuconazole or Iprodione.',
+    hi: 'मैंकोज़ेब, क्लोरोथैलोनिल, थायोफैनेट-मिथाइल, या नीम का तेल या कॉपर-आधारित कवकनाशी जैसे जैविक विकल्प। लगातार संक्रमणों के लिए, टेबुकोनाज़ोल या इप्रोडायोन का प्रयास करें।',
+    kn: 'ಮ್ಯಾಂಕೋಜೆಬ್, ಕ್ಲೋರೊಥಾಲೊನಿಲ್, ಥಯೋಫಾನೇಟ್-ಮೆಥೈಲ್, ಅಥವಾ ಬೇವಿನ ಎಣ್ಣೆ ಅಥವಾ ತಾಮ್ರ-ಆಧಾರಿತ ಫಂಗಿಸೈಡ್‌ಗಳಂತಹ ಸಾವಯವ ಪರ್ಯಾಯಗಳು. ನಿರಂತರ ಸೋಂಕುಗಳಿಗೆ, ಟೆಬುಕೊನಾಜೋಲ್ ಅಥವಾ ಇಪ್ರೊಡಿಯೋನ್ ಅನ್ನು ಪ್ರಯತ್ನಿಸಿ.',
   },
   'Powdery Mildew': {
-    en: 'Sulfur, Potassium bicarbonate, Neem oil, Myclobutanil, or Triadimefon.',
-    hi: 'सल्फर, पोटैशियम बाइकार्बोनेट, नीम का तेल, माइक्लोबुटानिल, या ट्रायडिमेफॉन।',
-    kn: 'ಗಂಧಕ, ಪೊಟ್ಯಾಷಿಯಂ ಬೈಕಾರ್ಬೊನೇಟ್, ಬೇವಿನ ಎಣ್ಣೆ, ಮೈಕ್ಲೋಬುಟಾನಿಲ್, ಅಥವಾ ಟ್ರಯಾಡಿಮೆಫಾನ್.',
+    en: 'Sulfur, Potassium bicarbonate, Neem oil, Myclobutanil, or Triadimefon. Additional effective options include Azoxystrobin, Penconazole, and biocontrol agents like Bacillus subtilis.',
+    hi: 'सल्फर, पोटैशियम बाइकार्बोनेट, नीम का तेल, माइक्लोबुटानिल, या ट्रायडिमेफॉन। अतिरिक्त प्रभावी विकल्पों में एज़ोक्सिस्ट्रोबिन, पेनकोनाज़ोल, और बैसिलस सबटिलिस जैसे जैव नियंत्रण एजेंट शामिल हैं।',
+    kn: 'ಗಂಧಕ, ಪೊಟ್ಯಾಷಿಯಂ ಬೈಕಾರ್ಬೊನೇಟ್, ಬೇವಿನ ಎಣ್ಣೆ, ಮೈಕ್ಲೋಬುಟಾನಿಲ್, ಅಥವಾ ಟ್ರಯಾಡಿಮೆಫಾನ್. ಹೆಚ್ಚುವರಿ ಪರಿಣಾಮಕಾರಿ ಆಯ್ಕೆಗಳಲ್ಲಿ ಅಜೋಕ್ಸಿಸ್ಟ್ರೋಬಿನ್, ಪೆನ್ಕೊನಾಜೋಲ್ ಮತ್ತು ಬ್ಯಾಸಿಲಸ್ ಸಬ್ಟಿಲಿಸ್ ನಂತಹ ಜೈವಿಕ ನಿಯಂತ್ರಣ ಏಜೆಂಟ್‌ಗಳು ಸೇರಿವೆ.',
   },
 };
 

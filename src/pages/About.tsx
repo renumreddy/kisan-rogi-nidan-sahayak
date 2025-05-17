@@ -9,7 +9,7 @@ const About: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <div className="min-h-screen natural-leaf-bg">
+    <div className="min-h-screen natural-leaf-bg flex flex-col">
       <header className="bg-gradient-to-r from-leaf-light to-leaf-primary text-white p-4 shadow-md">
         <div className="container mx-auto">
           <Link to="/" className="flex items-center gap-2 text-white hover:text-leaf-highlight transition-colors w-fit">
@@ -19,7 +19,7 @@ const About: React.FC = () => {
         </div>
       </header>
 
-      <main className="container mx-auto px-4 py-12 max-w-5xl">
+      <main className="container mx-auto px-4 py-12 max-w-5xl flex-grow">
         <Card className="bg-white/95 shadow-xl border-leaf-light/20">
           <CardHeader>
             <CardTitle className="text-2xl font-playfair text-leaf-primary text-center">{t('aboutTitle')}</CardTitle>

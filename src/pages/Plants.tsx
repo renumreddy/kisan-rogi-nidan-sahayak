@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -197,7 +198,7 @@ const Plants: React.FC = () => {
         hi: 'लैवेंडर',
         kn: 'ಲ್ಯಾವೆಂಡರ್'
       },
-      image: 'https://images.pexels.com/photos/158639/pomegranate-open-succulent-fruit-seed-158639.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: 'https://images.pexels.com/photos/4505161/pexels-photo-4505161.jpeg?auto=compress&cs=tinysrgb&w=600',
       basicCare: {
         en: 'Water when soil is dry, provide full sun (6+ hours daily). Requires excellent drainage and sandy soil.',
         hi: 'जब मिट्टी सूखी हो तब पानी दें, पूर्ण धूप प्रदान करें (दैनिक 6+ घंटे)। उत्कृष्ट जल निकासी और रेतीली मिट्टी की आवश्यकता होती है।',
@@ -221,7 +222,7 @@ const Plants: React.FC = () => {
         hi: 'एलोवेरा',
         kn: 'ಅಲೋವೇರಾ'
       },
-      image: 'https://images.pexels.com/photos/4198470/pexels-photo-4198470.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: 'https://images.pexels.com/photos/5748258/pexels-photo-5748258.jpeg?auto=compress&cs=tinysrgb&w=600',
       basicCare: {
         en: 'Water deeply but infrequently, allowing soil to dry completely between waterings. Bright indirect light.',
         hi: 'गहराई से लेकिन अनियमित रूप से पानी दें, पानी देने के बीच मिट्टी को पूरी तरह से सूखने दें। उज्ज्वल अप्रत्यक्ष प्रकाश।',
@@ -429,3 +430,4 @@ const Plants: React.FC = () => {
 };
 
 export default Plants;
+

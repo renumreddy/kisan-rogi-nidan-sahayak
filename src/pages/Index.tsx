@@ -83,7 +83,7 @@ const Index: React.FC = () => {
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-2">
               <Leaf className="h-8 w-8" />
-              <h1 className="text-2xl font-playfair font-bold">{t('appName')}</h1>
+              <h1 className="text-2xl font-playfair font-bold">LeafDoctor</h1>
             </div>
             <div className="flex items-center gap-4">
               <NavigationMenu className="hidden md:block">

@@ -198,7 +198,7 @@ const Plants: React.FC = () => {
         hi: 'लैवेंडर',
         kn: 'ಲ್ಯಾವೆಂಡರ್'
       },
-      image: 'https://images.pexels.com/photos/4505161/pexels-photo-4505161.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: 'https://github.com/renumreddy/kisan-rogi-nidan-sahayak/blob/917bbf002ddf4eeb4cdfb441d55e5937de2a2e55/src/Lavender.jpeg',
       basicCare: {
         en: 'Water when soil is dry, provide full sun (6+ hours daily). Requires excellent drainage and sandy soil.',
         hi: 'जब मिट्टी सूखी हो तब पानी दें, पूर्ण धूप प्रदान करें (दैनिक 6+ घंटे)। उत्कृष्ट जल निकासी और रेतीली मिट्टी की आवश्यकता होती है।',

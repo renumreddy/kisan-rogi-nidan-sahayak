@@ -3,7 +3,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { useLanguage, translateDisease, getTranslatedTreatment, getTranslatedPesticides } from '@/context/LanguageContext';
+import { useLanguage } from '@/context/LanguageContext';
 
 interface PredictionResult {
   disease: string;
@@ -17,10 +17,7 @@ interface ResultsDisplayProps {
 }
 
 const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ prediction, imageData, onReset }) => {
-  const { t, language } = useLanguage();
-  const translatedDiseaseName = translateDisease(prediction.disease, language);
-  const treatment = getTranslatedTreatment(prediction.disease, language);
-  const pesticides = getTranslatedPesticides(prediction.disease, language);
+  const { t, language, getTranslatedTreatment, getTranslatedPesticides } = useLanguage();
   
   // Ensure confidence is always between 0-100%
   const confidencePercentage = Math.min(100, Math.round(prediction.confidence * 100));
@@ -57,7 +54,7 @@ const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ prediction, imageData, 
                 <div>
                   <div className="flex justify-between mb-1">
                     <span className="text-sm font-medium">{t('disease')}</span>
-                    <span className="text-sm font-bold">{translatedDiseaseName}</span>
+                    <span className="text-sm font-bold">{prediction.disease}</span>
                   </div>
                 </div>
                 
@@ -76,19 +73,19 @@ const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ prediction, imageData, 
 
                 <div>
                   <h4 className="font-medium mb-1">{t('treatment')}</h4>
-                  <p className="text-sm text-gray-700">{treatment}</p>
+                  <p className="text-sm text-gray-700">{getTranslatedTreatment(prediction.disease, language)}</p>
                 </div>
 
                 <div>
                   <h4 className="font-medium mb-1">{t('pesticides')}</h4>
-                  <p className="text-sm text-gray-700">{pesticides}</p>
+                  <p className="text-sm text-gray-700">{getTranslatedPesticides(prediction.disease, language)}</p>
                 </div>
               </div>
             </CardContent>
           </Card>
 
           <div className="flex justify-center">
-            <Button onClick={onReset}>{t('tryAnother')}</Button>
+            <Button onClick={onReset} className="bg-leaf-primary hover:bg-leaf-dark">{t('tryAnother')}</Button>
           </div>
         </div>
       </div>

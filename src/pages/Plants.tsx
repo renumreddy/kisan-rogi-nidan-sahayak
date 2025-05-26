@@ -13,11 +13,11 @@ import { PlantList } from '@/components/PlantList';
 import { Plant } from '@/components/PlantCard';
 
 // Import local images
-import AloeVeraImg from '../Aloe Vera.jpg';
+import AloeVeraImg from '../AloeVera.jpg';
 import BasilImg from '../BASALI.jpg';
 import LavenderImg from '../Lavender.jpeg';
 import MonsteraImg from '../Monstera.jpeg';
-import PeaceLilyImg from '../Peace Lily.jpeg';
+import PeaceLilyImg from '../PeaceLily.jpeg';
 import SucculentImg from '../Succulent.jpg';
 
 type PlantInfoType = 'basic' | 'advanced' | 'issues';

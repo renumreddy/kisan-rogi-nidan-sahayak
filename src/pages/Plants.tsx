@@ -22,31 +22,6 @@ import SucculentImg from '../Succulent.jpg';
 
 type PlantInfoType = 'basic' | 'advanced' | 'issues';
 
-interface Plant {
-  id: string;
-  name: {
-    en: string;
-    hi: string;
-    kn: string;
-  };
-  image: string;
-  basicCare: {
-    en: string;
-    hi: string;
-    kn: string;
-  };
-  advancedCare: {
-    en: string;
-    hi: string;
-    kn: string;
-  };
-  commonIssues: {
-    en: string;
-    hi: string;
-    kn: string;
-  };
-}
-
 const Plants: React.FC = () => {
   const { t, language } = useLanguage();
   const [selectedInfoType, setSelectedInfoType] = useState<PlantInfoType>('basic');
@@ -63,7 +38,7 @@ const Plants: React.FC = () => {
       basicCare: {
         en: 'Water consistently, provide 6-8 hours of sunlight daily. Plant in well-draining soil rich in organic matter.',
         hi: 'नियमित रूप से पानी दें, दैनिक 6-8 घंटे धूप प्रदान करें। जैविक पदार्थों से भरपूर अच्छी जल निकासी वाली मिट्टी में लगाएं।',
-        kn: 'ನಿಯಮಿತವಾಗಿ ನೀರು ಹಾಕಿ, ದैनिक 6-8 ಗಂಟೆಗಳ ಸೂರ್ಯನ ಬೆಳಕು ಒದಗಿಸಿ. ಸಾವಯವ ವಸ್ತುಗಳಿಂದ ಸಮೃದ್ಧವಾದ ಒಳ್ಳೆಯ ನೀರು ಬಸಿಯುವ ಮಣ್ಣಿನಲ್ಲಿ ನೆಡಿ.'
+        kn: 'ನಿಯಮಿತವಾಗಿ ನೀರು ಹಾಕಿ, ದೈನಿಕ 6-8 ಗಂಟೆಗಳ ಸೂರ್ಯನ ಬೆಳಕು ಒದಗಿಸಿ. ಸಾವಯವ ವಸ್ತುಗಳಿಂದ ಸಮೃದ್ಧವಾದ ಒಳ್ಳೆಯ ನೀರು ಬಸಿಯುವ ಮಣ್ಣಿನಲ್ಲಿ ನೆಡಿ.'
       },
       advancedCare: {
         en: 'Prune suckers for indeterminate varieties, stake or cage plants. Use balanced fertilizer (10-10-10) every 4-6 weeks.',
@@ -111,7 +86,7 @@ const Plants: React.FC = () => {
       basicCare: {
         en: 'Water at the base of the plant in the morning, provide 6+ hours of sunlight. Mulch to retain moisture.',
         hi: 'सुबह में पौधे के आधार पर पानी दें, 6+ घंटे धूप प्रदान करें। नमी बनाए रखने के लिए मल्च करें।',
-        kn: 'ಬೆಳಿಗ್ಗೆ ಸಸ್ಯದ ಬುಡದಲ್ಲಿ ನೀರು ಹಾಕಿ, 6+ ಗಂटೆಗಳ ಸೂರ್ಯನ ಬೆಳಕು ಒದಗಿಸಿ. ತೇವಾಂಶವನ್ನು ಉಳಿಸಿಕೊಳ್ಳಲು ಮಲ್ಚ್ ಮಾಡಿ.'
+        kn: 'ಬೆಳಿಗ್ಗೆ ಸಸ್ಯದ ಬುಡದಲ್ಲಿ ನೀರು ಹಾಕಿ, 6+ ಗಂಟೆಗಳ ಸೂರ್ಯನ ಬೆಳಕು ಒದಗಿಸಿ. ತೇವಾಂಶವನ್ನು ಉಳಿಸಿಕೊಳ್ಳಲು ಮಲ್ಚ್ ಮಾಡಿ.'
       },
       advancedCare: {
         en: 'Prune in late winter/early spring. Fertilize with rose-specific fertilizer after first bloom and monthly through growing season.',
@@ -169,7 +144,7 @@ const Plants: React.FC = () => {
       commonIssues: {
         en: 'Yellowing leaves, brown spots, root rot. Often due to overwatering or insufficient light. Adjust care accordingly.',
         hi: 'पीली पत्तियां, भूरे धब्बे, रूट रॉट। अक्सर अधिक पानी देने या अपर्याप्त प्रकाश के कारण। तदनुसार देखभाल समायोजित करें।',
-        kn: 'ಹಳದಿಯಾಗುವ ಎಲೆಗಳು, ಕಂದು ಕಲೆಗಳು, ಬೇರು ಕೊಳೆತ. ಸಾಮಾನ್ಯವಾಗಿ ಅತಿಯಾದ ನೀರು ಹಾಕುವುದು ಅಥವಾ ಅपರ್ಯಾಪ್ತ ಬೆಳಕಿನಿಂದಾಗಿ. ಅದಕ್ಕೆ ಅನುಗುಣವಾಗಿ ಆರೈಕೆಯನ್ನು ಸರಿಹೊಂದಿಸಿ.'
+        kn: 'ಹಳದಿಯಾಗುವ ಎಲೆಗಳು, ಕಂದು ಕಲೆಗಳು, ಬೇರು ಕೊಳೆತ. ಸಾಮಾನ್ಯವಾಗಿ ಅತಿಯಾದ ನೀರು ಹಾಕುವುದು ಅಥವಾ ಅಪರ್ಯಾಪ್ತ ಬೆಳಕಿನಿಂದಾಗಿ. ಅದಕ್ಕೆ ಅನುಗುಣವಾಗಿ ಆರೈಕೆಯನ್ನು ಸರಿಹೊಂದಿಸಿ.'
       }
     },
     {
@@ -183,7 +158,7 @@ const Plants: React.FC = () => {
       basicCare: {
         en: 'Keep soil consistently moist but not soggy. Thrives in low to medium indirect light. Loves humidity.',
         hi: 'मिट्टी को लगातार नम रखें लेकिन गीला न होने दें। कम से मध्यम अप्रत्यक्ष प्रकाश में पनपती है। आर्द्रता पसंद करती है।',
-        kn: 'ಮಣ್ಣನ್ನು ನಿರಂತರವಾಗಿ ತೇವವಾಗಿ ಇರಿಸಿ ಆದರೆ ನೆನೆದು ಹೋಗಲು ಬಿಡಬೇಡಿ. ಕಡಿಮೆಯಿಂದ ಮಧ್ಯಮ ಪरೋಕ್ಷ ಬೆಳಕಿನಲ್ಲಿ ಚೆನ್ನಾಗಿ ಬೆಳೆಯುತ್ತದೆ. ಆರ್ದ್ರತೆಯನ್ನು ಇಷ್ಟಪಡುತ್ತದೆ.'
+        kn: 'ಮಣ್ಣನ್ನು ನಿರಂತರವಾಗಿ ತೇವವಾಗಿ ಇರಿಸಿ ಆದರೆ ನೆನೆದು ಹೋಗಲು ಬಿಡಬೇಡಿ. ಕಡಿಮೆಯಿಂದ ಮಧ್ಯಮ ಪರೋಕ್ಷ ಬೆಳಕಿನಲ್ಲಿ ಚೆನ್ನಾಗಿ ಬೆಳೆಯುತ್ತದೆ. ಆರ್ದ್ರತೆಯನ್ನು ಇಷ್ಟಪಡುತ್ತದೆ.'
       },
       advancedCare: {
         en: 'Fertilize every 6-8 weeks with diluted houseplant fertilizer. Repot every 1-2 years or when rootbound.',
@@ -207,12 +182,12 @@ const Plants: React.FC = () => {
       basicCare: {
         en: 'Water when soil is dry, provide full sun (6+ hours daily). Requires excellent drainage and sandy soil.',
         hi: 'जब मिट्टी सूखी हो तब पानी दें, पूर्ण धूप प्रदान करें (दैनिक 6+ घंटे)। उत्कृष्ट जल निकासी और रेतीली मिट्टी की आवश्यकता होती है।',
-        kn: 'ಮಣ್ಣು ಒಣಗಿದಾಗ ನೀರು ಹಾಕಿ, ಪೂರ್ಣ ಸೂರ್ಯನ ಬೆಳಕನ್ನು ಒದಗಿಸಿ (ದಿನಕ್ಕೆ 6+ ಗಂटೆಗಳು). ಉತ್ತಮ ಒಳಚರಂಡಿ ಮತ್ತು ಮರಳು ಮಣ್ಣಿನ ಅಗತ್ಯವಿದೆ.'
+        kn: 'ಮಣ್ಣು ಒಣಗಿದಾಗ ನೀರು ಹಾಕಿ, ಪೂರ್ಣ ಸೂರ್ಯನ ಬೆಳಕನ್ನು ಒದಗಿಸಿ (ದಿನಕ್ಕೆ 6+ ಗಂಟೆಗಳು). ಉತ್ತಮ ಒಳಚರಂಡಿ ಮತ್ತು ಮರಳು ಮಣ್ಣಿನ ಅಗತ್ಯವಿದೆ.'
       },
       advancedCare: {
         en: 'Prune after flowering to maintain shape. Add lime to soil if needed to raise pH. Minimal fertilizer required.',
         hi: 'आकार बनाए रखने के लिए फूल आने के बाद छंटाई करें। यदि आवश्यक हो तो पीएच बढ़ाने के लिए मिट्टी में चूना मिलाएं। न्यूनतम उर्वरक की आवश्यकता होती है।',
-        kn: 'ಆಕಾರವನ್ನು ಕಾಯ್ದುಕೊಳ್ಳಲು ಹೂವು ಬಿಟ್ಟ ನಂತರ ಕತ್ತರಿಸಿ. ಪಿಎಚ್ ಅನ್ನು ಹೆಚ್ಚಿಸಲು ಅಗತ್ಯವಿದ್ddರೆ ಮಣ್ಣಿಗೆ ಸುಣ್ಣ ಸೇರಿಸಿ. ಕನಿಷ್ಠ ಗೊಬ್ಬರದ ಅಗತ್ಯವಿದೆ.'
+        kn: 'ಆಕಾರವನ್ನು ಕಾಯ್ದುಕೊಳ್ಳಲು ಹೂವು ಬಿಟ್ಟ ನಂತರ ಕತ್ತರಿಸಿ. ಪಿಎಚ್ ಅನ್ನು ಹೆಚ್ಚಿಸಲು ಅಗತ್ಯವಿದ್ದರೆ ಮಣ್ಣಿಗೆ ಸುಣ್ಣ ಸೇರಿಸಿ. ಕನಿಷ್ಠ ಗೊಬ್ಬರದ ಅಗತ್ಯವಿದೆ.'
       },
       commonIssues: {
         en: 'Root rot, fungal diseases, woody growth. Most issues come from overwatering or poor drainage. Prefer dry conditions.',

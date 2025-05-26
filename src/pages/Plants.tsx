@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -65,7 +66,7 @@ const Plants: React.FC = () => {
       basicCare: {
         en: 'Water consistently, provide 6-8 hours of sunlight daily. Plant in well-draining soil rich in organic matter.',
         hi: 'नियमित रूप से पानी दें, दैनिक 6-8 घंटे धूप प्रदान करें। जैविक पदार्थों से भरपूर अच्छी जल निकासी वाली मिट्टी में लगाएं।',
-        kn: 'ನಿಯಮಿತವಾಗಿ ನೀರು ಹಾಕಿ, ದैनिक 6-8 ಗಂಟೆಗಳ ಸೂರ್ಯನ ಬೆಳಕು ಒದಗಿಸಿ. ಸಾವಯವ ವಸ್ತುಗಳಿಂದ ಸಮೃದ್ಧವಾದ ಒಳ್ಳೆಯ ನೀರು ಬಸಿಯುವ ಮಣ್ಣಿನಲ್ಲಿ ನೆಡಿ.'
+        kn: 'ನಿಯಮಿತವಾಗಿ ನೀರು ಹಾಕಿ, ದೈನಿಕ 6-8 ಗಂಟೆಗಳ ಸೂರ್ಯನ ಬೆಳಕು ಒದಗಿಸಿ. ಸಾವಯವ ವಸ್ತುಗಳಿಂದ ಸಮೃದ್ಧವಾದ ಒಳ್ಳೆಯ ನೀರು ಬಸಿಯುವ ಮಣ್ಣಿನಲ್ಲಿ ನೆಡಿ.'
       },
       advancedCare: {
         en: 'Prune suckers for indeterminate varieties, stake or cage plants. Use balanced fertilizer (10-10-10) every 4-6 weeks.',
@@ -98,7 +99,7 @@ const Plants: React.FC = () => {
       },
       commonIssues: {
         en: 'Downy mildew, aphids, leaf spot. Maintain good air circulation and avoid overcrowding plants.',
-        hi: 'डाउनी फफूंदी, एफिड्स, पत्ती के धब्बे। अच्छे वायु संचरण को बनाए रखें और पौधों की भीड़भाड़ से बचें।',
+        hi: 'डाउनी ففूंदी, एफिड्स, पत्ती के धब्बे। अच्छे वायु संचरण को बनाए रखें और पौधों की भीड़भाड़ से बचें।',
         kn: 'ಡೌನಿ ಮಿಲ್ಡ್ಯೂ, ಸಸ್ಯಹೇನು, ಎಲೆ ಕಲೆ. ಒಳ್ಳೆಯ ಗಾಳಿ ಸಂಚಾರವನ್ನು ಕಾಪಾಡಿಕೊಳ್ಳಿ ಮತ್ತು ಸಸ್ಯಗಳು ಜನಜಂಗುಳಿ ಆಗುವುದನ್ನು ತಪ್ಪಿಸಿ.'
       }
     },
@@ -171,7 +172,7 @@ const Plants: React.FC = () => {
       commonIssues: {
         en: 'Yellowing leaves, brown spots, root rot. Often due to overwatering or insufficient light. Adjust care accordingly.',
         hi: 'पीली पत्तियां, भूरे धब्बे, रूट रॉट। अक्सर अधिक पानी देने या अपर्याप्त प्रकाश के कारण। तदनुसार देखभाल समायोजित करें।',
-        kn: 'ಹಳದಿಯಾಗುವ ಎಲೆಗಳು, ಕಂದು ಕಲೆಗಳು, ಬೇರು ಕೊಳೆತ. ಸಾಮಾನ್ಯವಾಗಿ ಅತಿಯಾದ ನೀರು ಹಾಕುವುದು ಅಥವಾ ಅपರ್ಯಾಪ್ತ ಬೆಳಕಿನಿಂದಾಗಿ. ಅದಕ್ಕೆ ಅನುಗುಣವಾಗಿ ಆರೈಕೆಯನ್ನು ಸರಿಹೊಂದಿಸಿ.'
+        kn: 'ಹಳದಿಯಾಗುವ ಎಲೆಗಳು, ಕಂದು ಕಲೆಗಳು, ಬೇರು ಕೊಳೆತ. ಸಾಮಾನ್ಯವಾಗಿ ಅತಿಯಾದ ನೀರು ಹಾಕುವುದು ಅಥವಾ ಅಪರ್ಯಾಪ್ತ ಬೆಳಕಿನಿಂದಾಗಿ. ಅದಕ್ಕೆ ಅನುಗುಣವಾಗಿ ಆರೈಕೆಯನ್ನು ಸರಿಹೊಂದಿಸಿ.'
       }
     },
     {
@@ -185,7 +186,7 @@ const Plants: React.FC = () => {
       basicCare: {
         en: 'Keep soil consistently moist but not soggy. Thrives in low to medium indirect light. Loves humidity.',
         hi: 'मिट्टी को लगातार नम रखें लेकिन गीला न होने दें। कम से मध्यम अप्रत्यक्ष प्रकाश में पनपती है। आर्द्रता पसंद करती है।',
-        kn: 'ಮಣ್ಣನ್ನು ನಿರಂತರವಾಗಿ ತೇವವಾಗಿ ಇರಿಸಿ ಆದರೆ ನೆನೆದು ಹೋಗಲು ಬಿಡಬೇಡಿ. ಕಡಿಮೆಯಿಂದ ಮಧ್ಯಮ ಪरೋಕ್ಷ ಬೆಳಕಿನಲ್ಲಿ ಚೆನ್ನಾಗಿ ಬೆಳೆಯುತ್ತದೆ. ಆರ್ದ್ರತೆಯನ್ನು ಇಷ್ಟಪಡುತ್ತದೆ.'
+        kn: 'ಮಣ್ಣನ್ನು ನಿರಂತರವಾಗಿ ತೇವವಾಗಿ ಇರಿಸಿ ಆದರೆ ನೆನೆದು ಹೋಗಲು ಬಿಡಬೇಡಿ. ಕಡಿಮೆಯಿಂದ ಮಧ್ಯಮ ಪರೋಕ್ಷ ಬೆಳಕಿನಲ್ಲಿ ಚೆನ್ನಾಗಿ ಬೆಳೆಯುತ್ತದೆ. ಆರ್ದ್ರತೆಯನ್ನು ಇಷ್ಟಪಡುತ್ತದೆ.'
       },
       advancedCare: {
         en: 'Fertilize every 6-8 weeks with diluted houseplant fertilizer. Repot every 1-2 years or when rootbound.',
@@ -329,4 +330,99 @@ const Plants: React.FC = () => {
                       >
                         {language === 'en' ? 'Basic Care' : 
                          language === 'hi' ? 'बुनियादी देखभाल' : 
-                         'ಮೂಲ ಆರೈ
+                         'ಮೂಲ ಆರೈಕೆ'}
+                      </ToggleGroupItem>
+                      <ToggleGroupItem 
+                        value="advanced"
+                        className="text-xs px-2 py-1 data-[state=on]:bg-leaf-light data-[state=on]:text-white"
+                      >
+                        {language === 'en' ? 'Advanced' : 
+                         language === 'hi' ? 'उन्नत' : 
+                         'ಮುಂದುವರಿದ'}
+                      </ToggleGroupItem>
+                      <ToggleGroupItem 
+                        value="issues"
+                        className="text-xs px-2 py-1 data-[state=on]:bg-leaf-light data-[state=on]:text-white"
+                      >
+                        {language === 'en' ? 'Issues' : 
+                         language === 'hi' ? 'समस्याएं' : 
+                         'ಸಮಸ್ಯೆಗಳು'}
+                      </ToggleGroupItem>
+                    </ToggleGroup>
+                    <p className="text-sm text-gray-600">
+                      {getDisplayContent(plant, selectedInfoType)}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </TabsContent>
+          
+          <TabsContent value="list" className="mt-0">
+            <div className="space-y-6">
+              {plants.map((plant) => (
+                <Card key={plant.id} className="bg-white/95 shadow-md border-leaf-light/20">
+                  <div className="flex flex-col md:flex-row">
+                    <div className="md:w-1/3 h-48 md:h-auto overflow-hidden">
+                      <img 
+                        src={plant.image} 
+                        alt={plant.name[language]} 
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="md:w-2/3 p-6">
+                      <CardHeader className="p-0 pb-4">
+                        <CardTitle className="text-2xl font-playfair text-leaf-primary">{plant.name[language]}</CardTitle>
+                      </CardHeader>
+                      <CardContent className="p-0">
+                        <ToggleGroup 
+                          type="single" 
+                          defaultValue="basic"
+                          className="justify-start mb-4"
+                          onValueChange={(value) => {
+                            if (value) setSelectedInfoType(value as PlantInfoType);
+                          }}
+                        >
+                          <ToggleGroupItem 
+                            value="basic"
+                            className="text-sm px-3 py-2 data-[state=on]:bg-leaf-light data-[state=on]:text-white"
+                          >
+                            {language === 'en' ? 'Basic Care' : 
+                             language === 'hi' ? 'बुनियादी देखभाल' : 
+                             'ಮೂಲ ಆರೈಕೆ'}
+                          </ToggleGroupItem>
+                          <ToggleGroupItem 
+                            value="advanced"
+                            className="text-sm px-3 py-2 data-[state=on]:bg-leaf-light data-[state=on]:text-white"
+                          >
+                            {language === 'en' ? 'Advanced' : 
+                             language === 'hi' ? 'उन्नत' : 
+                             'ಮುಂದುವರಿದ'}
+                          </ToggleGroupItem>
+                          <ToggleGroupItem 
+                            value="issues"
+                            className="text-sm px-3 py-2 data-[state=on]:bg-leaf-light data-[state=on]:text-white"
+                          >
+                            {language === 'en' ? 'Issues' : 
+                             language === 'hi' ? 'समस्याएं' : 
+                             'ಸಮಸ್ಯೆಗಳು'}
+                          </ToggleGroupItem>
+                        </ToggleGroup>
+                        <p className="text-gray-600 leading-relaxed">
+                          {getDisplayContent(plant, selectedInfoType)}
+                        </p>
+                      </CardContent>
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </TabsContent>
+        </Tabs>
+      </main>
+    </div>
+  );
+};
+
+export default Plants;
